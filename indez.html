@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+
+<body data-theme="light">
+    <div class="cont">
+
+        
+        <div class="container">
+        <h1>Task Manager</h1>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter task..." />
+            <select id="prioritySelect" class="priority-select">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <input type="text" id="searchInput" class="search-box" placeholder="Search tasks..." />
+
+        <div class="filters">
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('active')">Active</button>
+            <button onclick="setFilter('completed')">Completed</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div class="controls">
+            <button onclick="clearCompleted()">Clear Completed</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </div>
+</div>
+    
+    <script src="scr.js"></script>
+</body>
+
+</html>
